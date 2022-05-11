@@ -1,0 +1,13 @@
+{% extends 'tasks/base.html' %}
+{%block title%} list Page {% endblock%}
+{% block content %}
+<p> Rostan ham o'chirmoqchimisiz seryozni??  {{ task.title }}</p>
+<a href="{% url 'home' %}">rostan ham o'chirmoqchimisiz.</a>
+<form action="" method ="POST">
+    {% csrf_token %}    
+    <input type='submit' value="o'chirib tashliman">
+</form>
+
+
+
+{%endblock%}
